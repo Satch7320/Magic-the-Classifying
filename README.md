@@ -18,6 +18,8 @@ Before we dive too deep, let's cover what features we are talking about.
 
 This example card has a lot of information, but can be translated as a number pretty simply. The value in the grey circle means it costs that amount of mana of arbitrary colors, and the symbols themselves indicate one color mana each. This card has a cost of {4}{R}{R}, with a total 'converted mana cost' of 6. This proved to be a simpler task, because these are strictly numerical values already, and have reasonable size.
 
+<br>
+
 <center>
   
 ![Gleemax](images/unh-121-gleemax.jpg)
