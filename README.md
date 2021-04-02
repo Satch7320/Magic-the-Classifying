@@ -3,7 +3,11 @@
 ## Leveraging Machine Learning to Predict Card Features
 
 ### Setting Out to Build A Generator
-This project started with lofty goals. I initially wanted to create an autogenerator that, given the existing catalog of Magic cards, would be able to generate on demand new cards that obeyed the game's rules and design philosophy while also being syntactically and lexically accurate. After some initial brainstorming and feedback, I decided a better choice would be to make instead a classifier that received the features of a card except for its cost and label said cost, as a proof of concept that could be implemented as a step in creating new cards.
+This project started with lofty goals. I initially wanted to create an autogenerator that, given the existing catalog of Magic cards, would be able to generate on demand new cards that obeyed the game's rules and design philosophy while also being syntactically and lexically accurate. The idea was inspired by claims that Magic is [turing complete](https://www.toothycat.net/~hologram/Turing/HowItWorks.html) and having seen a humourous attempt at the same idea:
+
+![Horse](https://user-images.githubusercontent.com/43886791/113445675-f4ca5400-93bb-11eb-860d-a3a3b6e96e5f.png)
+
+After some initial brainstorming and feedback, I decided a better choice would be to make instead a classifier that received the features of a card except for its cost and label said cost, as a proof of concept that could be implemented as a step in creating new cards.
 
 ### A Quick Explanation of the Data
 
