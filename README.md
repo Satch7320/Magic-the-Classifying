@@ -66,6 +66,7 @@ At this point, I came to the gap I was unable to breach: I presently lack the kn
 
 ![LossSplit](https://user-images.githubusercontent.com/43886791/113454975-20a30500-93cf-11eb-9471-0acb60c8a1b5.png)
 
-![AccuracySplit](https://user-images.githubusercontent.com/43886791/113454984-24cf2280-93cf-11eb-8339-c9dd23908556.png)
+![AccuracySplit](https://user-images.githubusercontent.com/43886791/113455067-53e59400-93cf-11eb-91ac-3c8f2f1a6283.png)
+
 
 Over the course of 100 learning iterations, the model's accuracy came away with a final accuracy of over 98% on the validation data. This is a good start to building a generator that can collate the proper features to build a new Magic card. Hopefully this project is 'To Be Continued'!
