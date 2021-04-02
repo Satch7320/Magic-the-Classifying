@@ -60,7 +60,7 @@ Wow! NMF did a great job of identifying and grouping important terms together. T
 
 ### The Pivot
 
-At this point, I came to the gap I was unable to breach: I presently lack the knowledge to generate new objects utilizing these latent features. I pivoted to making a classifier that, utilizing my processed data, was able to label a card's cost based on its other features. To do so, I implemented a Recurrent Neural Network utilizing an Embedding layer (which handled the vectoriztion of my earlier Sci-Kit Learn object), then 2 Gated Recurrent Unit layers before eventually passing through a dense layer to filter by label.
+At this point, I came to the gap I was unable to breach: I presently lack the knowledge to generate new objects utilizing these latent features. I pivoted to making a classifier that, utilizing my processed data, was able to label a card's cost based on its other features. To do so, I initially tried using Multinomial Naive Bayes and Categorical Naive Bayes models from Sci-Kit Learn, but neither could do much better than random guessing. Moving on, I implemented a Recurrent Neural Network utilizing an Embedding layer (which handled the vectoriztion of my earlier Sci-Kit Learn object), then 2 Gated Recurrent Unit layers before eventually passing through a dense layer to filter by label.
 
 ![RNN Layers and Parameters](images/RNNLayersParams.png)
 
