@@ -11,26 +11,26 @@ Before we dive too deep, let's cover what features we are talking about.
 |![Example Card](images/700px-Parts_of_a_Magic_card.webp)|
 |:--:|
 | We want to determine the total value in the top right, given the other data |
-
 </center>
 
 This example card has a lot of information, but can be translated as a number pretty simply. The value in the grey circle means it costs that amount of mana of arbitrary colors, and the symbols themselves indicate one color mana each. This card has a cost of {4}{R}{R}, with a total 'converted mana cost' of 6. This proved to be a simpler task, because these are strictly numerical values already, and have reasonable size.
 
 <center>
   
-![Gleemax](images/unh-121-gleemax..jpb)
+![Gleemax](images/unh-121-gleemax.jpg)
 
 </center>
 
 Well, mostly. There are some joke sets that I elected to discard, as they are made with breaking design philosophy in mind. 
 
-From here, I did some exploration of the data myself to identify how the features like type and color played together, then to see how well we could use Non-Negative Matrix Factorization to identify these more abstract concepts. Because we are 
+When I started, I did some exploration of the data myself to identify how the features like type and color played together, then used Non-Negative Matrix Factorization to see how well we could identify these more abstract concepts algorithmically. Returning to the idea of design philosophy card types will presumably be a bit more stratified in how they are represented per color, while each color and color combination will hopefully be about equally represented.
 
-![Color Representation](images/ColorRepresentation.png)
+|![Color Representation](images/ColorRepresentation.png)
+|:--:|
+|![Card Type Per Color](images/CardTypePerColor.png)
+|![LatentFeatures](https://user-images.githubusercontent.com/43886791/113439383-158cac80-93b0-11eb-8428-355953a3278c.png)
 
-![Card Type Per Color](images/CardTypePerColor.png)
-
-![LatentFeatures](https://user-images.githubusercontent.com/43886791/113439383-158cac80-93b0-11eb-8428-355953a3278c.png)
+Wow! NMF did a great job of identifying and grouping important terms together.
 
 ![Bad PCA](images/badpca.png)
 
