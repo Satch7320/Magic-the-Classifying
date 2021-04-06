@@ -52,15 +52,15 @@ Oh, no! This is bad. This graph tells me that my PCA model needed *every single 
 
 ![Good PCA](images/GoodPCA.png)
 
-MUCH better. Now I know that there are usually about 375 important words that my model can use to explain why a card is given its cost. After this processing, we are ready for Non-Negative Matrix Factorization. NMF is meant to identify 'latent topics,' which in this case I hope to be faithful representations of Magic's design philosophy. 
+MUCH better. Now I know that there are usually about 375 important terms that my model can use to explain why a card is given its cost. After this processing, we are ready for Non-Negative Matrix Factorization. NMF is meant to identify 'latent topics,' which in this case I hope to be faithful representations of Magic's design philosophy. 
 
 |![LatentFeatures](https://user-images.githubusercontent.com/43886791/113439383-158cac80-93b0-11eb-8428-355953a3278c.png)
 
-Wow! NMF did a great job of identifying and grouping important terms together. To give some context, Topic 2 has identified that lands add mana and, being a central part of Magic are highly represented in Core sets. Topic 4 covers zone changes by cards, while Topic 7 is an incredible job of representing Red. This is pretty exciting!
+Wow! NMF did a great job of identifying and grouping important terms together. To give some context, Topic 2 has identified that lands add mana and, being a central part of Magic, are highly represented in Core sets. Topic 4 covers zone changes by cards, while Topic 7 is an incredible job of representing Red. This is pretty exciting!
 
 ### The Pivot
 
-At this point, I came to the gap I was unable to breach: I presently lack the knowledge to generate new objects utilizing these latent features. I pivoted to making a classifier that, utilizing my processed data, was able to label a card's cost based on its other features. To do so, I initially tried using Multinomial Naive Bayes and Categorical Naive Bayes models from Sci-Kit Learn, but neither could do much better than random guessing. Moving on, I implemented a Recurrent Neural Network utilizing an Embedding layer (which handled the vectoriztion of my earlier Sci-Kit Learn object), then 2 Gated Recurrent Unit layers before eventually passing through a dense layer to filter by label.
+At this point, I came to the gap I was unable to breach: I presently lack the knowledge to generate new objects utilizing these latent features. I pivoted to making a classifier that, utilizing my processed data, was able to label a card's cost based on its other features. To do so, I initially tried using Multinomial Naive Bayes and Categorical Naive Bayes models from Sci-Kit Learn, but neither could do much better than random guessing. Moving on, I implemented a Recurrent Neural Network utilizing an Embedding layer (which handled the vectorization of my earlier Sci-Kit Learn object), then 2 Gated Recurrent Unit layers before eventually passing through a dense layer to filter by label.
 
 ![RNN Layers and Parameters](images/RNNLayersParams.png)
 
